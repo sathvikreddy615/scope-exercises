@@ -1,18 +1,14 @@
+const locations = [[1,1], [1,2], [1,3], [2,1], [2,2], [2,3]];
 
-    const ModSquad = {
-        "members": ["Pete Cochran", "Linc Hayes", "Julie Barnes", "Capt. Adam Greer", "Chief Barney Metcalf"],
-        "series": {
-            "start": "1968",
-            "end": "1973"
-        }
+for (let k = 0; k < locations.length; k++) {
+    const currentLocation = locations[k]
+
+    if (currentLocation[0] > 2) {
+        const invalidLocation = true;
     }
 
-    let HTMLRepresentation = `<h1>The Mod Squad</h1>`;
-
-    ModSquad.members.forEach(member => {
-        HTMLRepresentation += `<div>${member}</div>`;
-        return HTMLRepresentation;
-        document.querySelector(".show-info").innerHTML = HTMLRepresentation;
-    })
-
-
+    if (invalidLocation = false) {
+        console.log("This location is invalid");
+    }
+    console.log(`There were ${k} locations displayed`);
+}
