@@ -1,14 +1,18 @@
-// let cookies = ["Oatmeal Raisin", "Chocolate Chip", "Sugar", "Peanut Butter", "Snickerdoodle", "Ginger"]
-// let y = 1
 
-// for (let x = 1; x < cookies.length; x++) {
-//     let currentCookie = cookies[x]
-//     console.log(`Mmmmmmm... that's a good ${currentCookie} cookie`)
-// }
+    const ModSquad = {
+        "members": ["Pete Cochran", "Linc Hayes", "Julie Barnes", "Capt. Adam Greer", "Chief Barney Metcalf"],
+        "series": {
+            "start": "1968",
+            "end": "1973"
+        }
+    }
 
-const conjunction = (firstWord, secondWord) => {
-    const conjoinedWord = `${firstWord} ${secondWord}`;
-    console.log(conjoinedWord);
-}
+    let HTMLRepresentation = `<h1>The Mod Squad</h1>`;
 
-conjunction("Master", "Card");
+    ModSquad.members.forEach(member => {
+        HTMLRepresentation += `<div>${member}</div>`;
+        return HTMLRepresentation;
+        document.querySelector(".show-info").innerHTML = HTMLRepresentation;
+    })
+
+
